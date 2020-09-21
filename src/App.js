@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Balance from './Balance';
+import IncomeExpense from './IncomeExpense';
+import History from './History';
+import NewTransaction from './NewTransaction';
+import Context from './Context';
 
+let BillType, BillValue;
 function App() {
+  BillType = React.useState("Type");
+  BillValue = React.useState(0.00);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Context.Provider value={{BillType, BillValue}}>
+    <>
+      <header>
+        <h1 className={"h"}>Expense Tracker</h1>
       </header>
-    </div>
+      <Balance></Balance><br/>
+      <IncomeExpense></IncomeExpense><br/>
+      <History></History>
+      <NewTransaction></NewTransaction>
+    </>
+    </Context.Provider>
   );
 }
 

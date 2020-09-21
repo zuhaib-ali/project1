@@ -36,3 +36,90 @@
     transform: rotate(360deg);
   }
 }
+
+body #root{
+  background-color: lightgray;
+  border:1px solid lightgrey;
+  padding:10px;
+  margin:20px 0px;
+  width:25%;
+  position:relative;
+  left:37.5%
+}
+
+.h{
+  text-align:center;
+  color:blue;
+  border: 1px solid lightgrey;
+  box-shadow: 0px 0px 2px lightgray;
+}
+
+.currentBalance{
+  line-height: 10px;
+}
+
+.currentBalance p{
+  font-size:30px;
+}
+
+.incomeExpense{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border:1px solid rgb(187, 133, 133);
+  background-color:lightslategray;
+}
+
+.incomeExpense div{
+  text-align: center;
+  line-height: 10px;
+  
+}
+ .incomeExpense p{
+   font-size:30px;
+   
+ }
+
+ .newTran{
+   font-size: 20px;
+   width: 100%;
+ }
+
+ .addTran{
+   width:100%;
+   color:white;
+   font-size:20px;
+   background-color: green;
+ }
+
+ #history{
+   padding: 0%;
+ }
+ #history li{
+   font-family: 'Times New Roman', Times, serif;
+   list-style-type: none;
+   border:1px solid grey;
+   margin:1px;
+   padding:3px;
+   background-color: lightgreen;
+ }
+
+#delete_income{
+  color:green;
+  font-weight: bold;
+  float:right;
+}
+
+#delete_expense{
+  color:red;
+  font-weight: bold;
+  float:right;
+}
+
+#incomeValue{
+  color:green;
+}
+
+#expenseValue{
+  color:red;
+}
